@@ -1,3 +1,9 @@
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$background-color: #f8f9fa;
+$text-color: #212529;
+$border-radius: 4px;
+
 * {
   margin: 0;
   padding: 0;
@@ -15,12 +21,6 @@ body {
   color: #333;
   background-color: #f8f9fa;
 }
-
-$primary-color: #007bff;
-$secondary-color: #6c757d;
-$background-color: #f8f9fa;
-$text-color: #212529;
-$border-radius: 4px;
 
 @mixin responsive($breakpoint) {
   @if $breakpoint == sm {
@@ -100,10 +100,22 @@ a {
   color: #fff;
   font-size: 1rem;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background 0.3s, all 0.3s ease-in-out;
 
   &:hover {
-    background-color: darken($primary-color, 10%);
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.05)
+    );
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    color: $background-color;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
   }
 }
 
