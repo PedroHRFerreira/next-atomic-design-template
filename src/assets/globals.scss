@@ -1,8 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
 $primary-color: #007bff;
 $secondary-color: #6c757d;
 $background-color: #f8f9fa;
 $text-color: #212529;
 $border-radius: 4px;
+$darkGrey1: #1e201e;
 
 * {
   margin: 0;
@@ -16,10 +19,11 @@ html {
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
   line-height: 1.5;
-  color: #333;
-  background-color: #f8f9fa;
+  color: #fff;
+  background-color: #010409;
 }
 
 @mixin responsive($breakpoint) {
@@ -87,7 +91,7 @@ a {
   color: inherit;
 
   &:hover {
-    color: $primary-color;
+    color: #c2c5c9;
   }
 }
 
@@ -128,5 +132,37 @@ a {
 
   @include responsive(sm) {
     @include grid(1);
+  }
+}
+
+.loading .anim-loading {
+  position: relative;
+  min-height: 763px;
+  pointer-events: none;
+  overflow: hidden;
+  border-color: transparent;
+}
+.loading .anim-loading::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    45deg,
+    $darkGrey1 25%,
+    #ecdfcc 50%,
+    $darkGrey1 75%
+  );
+  background-size: 300%;
+  pointer-events: none;
+  border-radius: 5px;
+  z-index: 99;
+  animation: loadingEffect 2s infinite;
+}
+@keyframes loadingEffect {
+  from {
+    background-position: 300% 0;
+  }
+  to {
+    background-position: 0% 0;
   }
 }
