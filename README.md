@@ -1,34 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Template
 
-## Getting Started
+Template Next.js com estrutura organizada para projetos escaláveis.
 
-First, run the development server:
+## 🚀 Tecnologias
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- [Next.js 14+](https://nextjs.org/) - Framework React
+- [TypeScript](https://www.typescriptlang.org/) - Tipagem estática
+- [SASS](https://sass-lang.com/) - Pré-processador CSS
+
+## 📁 Estrutura de Pastas
+
+```
+src/
+├── app/                    # App Router (Next.js 14+)
+├── components/             # Componentes reutilizáveis
+├── templates/              # Estruturas de página
+├── config/                 # Configurações (env.ts)
+├── services/               # Serviços externos (api.ts)
+├── store/                  # Conexões e estado
+├── hooks/                  # Hooks customizados
+├── types/                  # Tipos globais
+└── utils/                  # Funções utilitárias
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🧩 Componentização
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Estrutura **Components + Templates**:
 
-## Learn More
+- **Components** → Componentes reutilizáveis (botões, cards, headers, etc)
+- **Templates** → Estruturas que montam o corpo de cada página
 
-To learn more about Next.js, take a look at the following resources:
+```
+Components → Templates → Pages (app/)
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ⚙️ Configuração
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+# 1. Configurar variáveis de ambiente
+cp .env.example .env.local
 
-## Deploy on Vercel
+# 2. Instalar dependências
+npm install
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# 3. Executar
+npm run dev
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📝 Convenções
+
+| Tipo        | Convenção                      | Exemplo        |
+| ----------- | ------------------------------ | -------------- |
+| Componentes | PascalCase                     | `Button`       |
+| Templates   | PascalCase + sufixo `Template` | `HomeTemplate` |
+| Hooks       | camelCase + prefixo `use`      | `useFetch`     |
+| Tipos       | PascalCase + prefixo `I`       | `IUser`        |
+| Estilos     | `styles.module.scss`           | -              |
+
+### Estrutura de Componente
+
+```
+ComponentName/
+├── index.tsx
+├── styles.module.scss
+└── types.ts (opcional)
+```
+
+## 📄 Licença
+
+MIT
