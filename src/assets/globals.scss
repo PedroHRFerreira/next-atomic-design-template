@@ -19,18 +19,18 @@ textarea {
   color: #fff;
   background: radial-gradient(
       circle at 80% 20%,
-      #1a2a1a 0%,
-      #0d0f12 50%,
+      #1a0505 0%,
+      #0a0202 50%,
       transparent 100%
     ),
     radial-gradient(
       circle at 20% 80%,
-      #1a1025 0%,
-      #0d0f12 50%,
+      #150404 0%,
+      #0a0202 50%,
       transparent 100%
     ),
-    radial-gradient(ellipse at 50% 50%, #0d0f12 0%, #0a0c0e 100%);
-  background-color: #0a0c0e;
+    radial-gradient(ellipse at 50% 50%, #0f0303 0%, #000000 100%);
+  background-color: #000000;
   background-attachment: fixed;
 }
 
@@ -71,12 +71,7 @@ a {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-      45deg,
-      $darkGrey1 25%,
-      #ecdfcc 50%,
-      $darkGrey1 75%
-    );
+    background: linear-gradient(45deg, #1e201e 25%, #ecdfcc 50%, #1e201e 75%);
     background-size: 300%;
     pointer-events: none;
     border-radius: 5px;
